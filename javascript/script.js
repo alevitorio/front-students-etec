@@ -1,12 +1,7 @@
 
-
-
-
 fetch('http://localhost:3000/students')
     .then(response => response.json())
     .then(data => {
-        console.log(data);
-
         const cards = document.querySelector('.cards');
         const card = data.map(student => {
             const card = document.createElement('div');
