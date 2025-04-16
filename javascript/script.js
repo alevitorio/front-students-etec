@@ -1,4 +1,5 @@
 
+// Carregar os alunos do JSON Server
 fetch('http://localhost:3000/students')
     .then(response => response.json())
     .then(data => {
@@ -23,3 +24,31 @@ fetch('http://localhost:3000/students')
     })
     .catch(error => console.error('Erro ao carregar alunos:', error));
 
+// Formulário de cadastro de aluno
+const formUser = document.getElementById("form-user")
+formUser.addEventListener('submit', e =>{
+    e.preventDefault()
+    const formData = new FormData(formUser);
+    const data = Object.fromEntries(formData.entries())
+    
+    fetch('http://localhost:3000/students', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erro ao cadastrar aluno');
+        }
+        alert('Aluno cadastrado com sucesso!')
+        formUser.reset()
+        console.log(response.json());
+        
+        return response.json();
+
+       })
+   
+    
+})

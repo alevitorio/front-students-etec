@@ -24,7 +24,7 @@ body {
     text-decoration: none;
     
 }
-#voltar{
+.button-link{
     color: #ff0342;
     padding: 8px;
     margin-right: 13px;
@@ -32,7 +32,7 @@ border-radius: 50%;
 box-shadow: 1px 1px 5px #ff0342;
 display:inline-block;
 }
-#voltar:hover{
+.button-link:hover{
     background: #ff0342;
     color: #fff;
     transition: all 0.5s ease;
@@ -78,7 +78,7 @@ display:inline-block;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     gap: 10px;
     padding: 0 20px;
 }
@@ -86,7 +86,7 @@ display:inline-block;
 .section {
     width: 100vw;
     height: 85vh;
-  
+  position: relative;
     display: flex;
     flex-direction: column;
     padding: 2rem;
@@ -160,7 +160,23 @@ display:inline-block;
 .button-card i{
    font-size:1.5rem;
 }
-
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    width: 100%;
+}
+.cadastrar{
+    position: fixed;
+    bottom: 20%;
+    right: 10%;
+}
+.cadastrar a i{
+    padding: 1rem;
+    font-size: 2rem;
+}
 .footer{
     width: 100%;
     height: 10vh;
@@ -178,4 +194,54 @@ display:inline-block;
     z-index: 1000;
     box-shadow: 0 0 10px rgba(253, 4, 4, 0.5);
     margin-top: 10px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    width: 100%;
+    max-width: 700px;
+    height: 90%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+ button{
+    all: unset;
+    font-size: 0.5rem;
+    display: flex;
+    gap: 10px;
+}
+#btn-save{
+   width: 90%;
+    font-size: 1.5rem;
+    
+}
+input{
+    all:unset;
+    width: 100%;
+  
+    padding: 12px;
+      
+
+}
+
+.input{
+    display: flex;
+    gap: 10px;
+    height: 55px;
+    border: 1px solid #ff0342;
+    border-radius: 5px;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(253, 4, 4, 0.5);
+    margin-bottom: 10px;
+}
+
+.input i {
+    padding: 10px;
+    font-size: 1.5rem;
+    color: #ff0342;
 }
