@@ -39,6 +39,7 @@ formUser.addEventListener('submit', e =>{
     })
     .then(response => {
         if (!response.ok) {
+            alert("Aluno já está cadastrado ou não existe no GITHUB!")
             throw new Error('Erro ao cadastrar aluno');
         }
         alert('Aluno cadastrado com sucesso!')
