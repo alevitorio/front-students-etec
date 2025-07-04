@@ -1,5 +1,5 @@
 
-fetch('http://localhost:3000/students')
+fetch('https://backend-students-etec.onrender.com/students')
     .then(response => response.json())
     .then(data => {
         const cards = document.querySelector('.cards');
