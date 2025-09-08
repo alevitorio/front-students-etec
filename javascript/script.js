@@ -1,5 +1,5 @@
 
-fetch('https://backend-students-etec.onrender.com/students')
+fetch('https://api-students-wac3.onrender.com/students')
     .then(response => response.json())
     .then(data => {
         const cards = document.querySelector('.cards');
@@ -30,7 +30,7 @@ formUser.addEventListener('submit', e =>{
     const formData = new FormData(formUser);
     const data = Object.fromEntries(formData.entries())
     
-    fetch('https://backend-students-etec.onrender.com/students', {
+    fetch('https://api-students-wac3.onrender.com/students', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
